@@ -1,21 +1,72 @@
 import React from 'react';
+import Card from '../Cards';
+import images from "../../assets/images/projects/index"
+
+const projects = [
+  {
+    id: 1,
+    img: images[0],
+    alt: "Note Taker",
+    link: 'https://notetakersexpress.herokuapp.com/',
+    name: "Note Taker",
+    repo: 'https://github.com/fgeorge206/Note-Taker'
+  },
+  {
+    id: 2,
+    // img: images[0],
+    alt: "Review World",
+    link: 'https://review-world.herokuapp.com/login',
+    name: "Review World",
+    repo: 'https://github.com/hornickjohn/review-world'
+  },
+  {
+    id: 3,
+    // img: images[0],
+    alt: "Balling on a Budget",
+    link: 'https://nhancoding.github.io/Balling-on-a-Budget/',
+    name: "Balling on a Budget",
+    repo: 'https://github.com/Nhancoding/Balling-on-a-Budget'
+  },
+  {
+    id: 4,
+    // img: images[0],
+    alt: "Password Generator",
+    link: 'https://fgeorge206.github.io/Password-Generator/',
+    name: "Password Generator",
+    repo: 'https://github.com/fgeorge206/Password-Generator'
+  },
+]
 
 export default function Portfolio() {
   return (
+    // <div className='container mt-5'>
+    //   <h1>Portfolio Page</h1>
+    //   <div className='container'>
+    //     <div className='row'>
+    //       <div className='card col'>
+    //         <a href='https://notetakersexpress.herokuapp.com/' target={'_blank'} imgsrc="../assets/images/note-taker.png">Note Taker</a>
+    //       </div>
+    //       <div className='card col'>
+    //         Portfolio 2
+    //       </div>
+    //     </div>
+    //     <div className='row'>
+    //       <div className='card col'>
+    //         Portfolio 3
+    //       </div>
+    //       <div className='card col'>
+    //         Portfolio 4
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+    // <div>
+    //   {project.map((project) =>{
+    //     return <Project key={project.id} img={project.img} alt={project.alt} link={project.link} name={project.name} repo={project.repo} />;
+    // })}
+    // </div>
     <div>
-      <h1>Portfolio Page</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
-      </p>
+      {projects.map(projects=><Card id={projects.id} name={projects.name} alt={projects.alt} link={projects.link}/>)}
     </div>
   );
 }

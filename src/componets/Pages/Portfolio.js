@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../Cards';
-import images from "../../assets/images/projects/index"
+import images from "../assets/images/projects"
 
 const projects = [
   {
@@ -13,7 +13,7 @@ const projects = [
   },
   {
     id: 2,
-    // img: images[0],
+    img: images[1],
     alt: "Review World",
     link: 'https://review-world.herokuapp.com/login',
     name: "Review World",
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     id: 3,
-    // img: images[0],
+    img: images[2],
     alt: "Balling on a Budget",
     link: 'https://nhancoding.github.io/Balling-on-a-Budget/',
     name: "Balling on a Budget",
@@ -29,7 +29,7 @@ const projects = [
   },
   {
     id: 4,
-    // img: images[0],
+    img: images[3],
     alt: "Password Generator",
     link: 'https://fgeorge206.github.io/Password-Generator/',
     name: "Password Generator",
@@ -60,13 +60,8 @@ export default function Portfolio() {
     //     </div>
     //   </div>
     // </div>
-    // <div>
-    //   {project.map((project) =>{
-    //     return <Project key={project.id} img={project.img} alt={project.alt} link={project.link} name={project.name} repo={project.repo} />;
-    // })}
-    // </div>
     <div>
-      {projects.map(projects=><Card id={projects.id} name={projects.name} alt={projects.alt} link={projects.link}/>)}
+      {projects.map(projects=><Card id={projects.id} name={projects.name} alt={projects.alt} link={projects.link} images={projects.img}/>)}
     </div>
   );
 }

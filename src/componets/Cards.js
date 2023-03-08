@@ -8,9 +8,7 @@ export default function Card(props) {
         <img className="card-img-top" src={props.images} alt={props.alt}/>
 
         <div className="card-body">
-        <h5 className="card-title">Name: {props.name}</h5>
-          <p className="card-text">Description: {props.description}</p>
-          <p className="card-text">ID: {props.id}</p>
+        <h5 className="card-title">{props.name}</h5>
           <a href="#" className="btn btn-primary">
             {props.name}
           </a>

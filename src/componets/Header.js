@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Header = () => {
   return (
-    <div className='container card text-center'>
+    <div className='container p-5 text-center'>
         <h1>React Portfolio</h1>
     {/* <nav className="navbar navbar-expand-lg bg-body-tertiary">
     <div className="container-fluid">

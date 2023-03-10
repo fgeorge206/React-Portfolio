@@ -1,6 +1,9 @@
 import React from 'react';
 import Card from '../Cards';
 import images from "../assets/images/projects"
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const projects = [
   {
@@ -35,33 +38,26 @@ const projects = [
     name: "Password Generator",
     repo: 'https://github.com/fgeorge206/Password-Generator'
   },
+  {
+    id: 5,
+    img: images[4],
+    alt: "How To Train Your Dragon Quiz",
+    link: 'https://fgeorge206.github.io/Password-Generator/',
+    name: "How To Train Your Dragon Quiz",
+    repo: 'https://github.com/fgeorge206/Password-Generator'
+  },
 ]
 
 export default function Portfolio() {
   return (
-    // <div className='container mt-5'>
-    //   <h1>Portfolio Page</h1>
-    //   <div className='container'>
-    //     <div className='row'>
-    //       <div className='card col'>
-    //         <a href='https://notetakersexpress.herokuapp.com/' target={'_blank'} imgsrc="../assets/images/note-taker.png">Note Taker</a>
-    //       </div>
-    //       <div className='card col'>
-    //         Portfolio 2
-    //       </div>
-    //     </div>
-    //     <div className='row'>
-    //       <div className='card col'>
-    //         Portfolio 3
-    //       </div>
-    //       <div className='card col'>
-    //         Portfolio 4
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-    <div>
-      {projects.map(projects=><Card id={projects.id} name={projects.name} alt={projects.alt} link={projects.link} images={projects.img}/>)}
-    </div>
+    <Container>
+      <Row sm={2}>
+          {projects.map(projects=>
+          <Col>
+            <Card id={projects.id} name={projects.name} alt={projects.alt} link={projects.link} images={projects.img}/>
+          </Col>
+            )}
+      </Row>
+    </Container>
   );
 }

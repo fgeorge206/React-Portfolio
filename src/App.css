@@ -1,3 +1,16 @@
-/* * {
-    background-color: rgb(19, 88, 88);
+* {
+    background-color: rgb(132, 173, 173);
+}
+/* 
+main {
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    flex-grow:1
 } */
+
+#content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import './App.css'
+import { Footer } from "./componets/Footer";
 import { Header } from "./componets/Header";
 import PortfolioContainer from "./componets/PortfolioContainer";
 
@@ -22,9 +23,13 @@ function App () {
         }
     }
     return (
-        <div>
+        <div id="content">
             <Header/>
+            <br/>
             <PortfolioContainer handleFormChange={handleFormChange} userName={userName} userEmail={userEmail} postText={postText}/>
+            <br/>
+            <div style={{flexGrow:1}}></div>
+            <Footer/>
         </div>
     )
 }

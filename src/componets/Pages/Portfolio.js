@@ -42,9 +42,9 @@ const projects = [
     id: 5,
     img: images[4],
     alt: "How To Train Your Dragon Quiz",
-    link: 'https://fgeorge206.github.io/Password-Generator/',
+    link: 'https://fgeorge206.github.io/Quiz-Application/',
     name: "How To Train Your Dragon Quiz",
-    repo: 'https://github.com/fgeorge206/Password-Generator'
+    repo: 'https://github.com/fgeorge206/Quiz-Application'
   },
 ]
 
